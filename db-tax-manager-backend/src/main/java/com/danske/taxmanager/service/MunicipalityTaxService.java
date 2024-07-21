@@ -4,6 +4,7 @@ import com.danske.taxmanager.entity.MunicipalityTaxData;
 import org.springframework.data.jpa.repository.Query;
 
 import java.sql.Date;
+import java.util.Optional;
 
 public interface MunicipalityTaxService {
 
@@ -16,4 +17,5 @@ public interface MunicipalityTaxService {
 
     Iterable<MunicipalityTaxData> fetchAllMunicipalityTaxDataByMunicipalityName(String municipalityName);
 
+    Optional<MunicipalityTaxData> fetchDataById(String id);
 }
