@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "fee8f127-cac6-4831-8149-4f0cb72a26aa",
+		"name": "Tax Management Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13047107"
+	},
+	"item": [
+		{
+			"name": "Add Municipalities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"municipalityName\":\"Aarhus\",\r\n    \"active\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/add-municipality",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add-municipality"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Municipalities",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipalityName\":\"Aarhus\",\r\n    \"active\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/add-municipality",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-municipality"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 09:11:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 202,\n    \"responseMessage\": \"Saved successfully\",\n    \"data\": \"M-256369\",\n    \"numberOfRecords\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Municipalities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/municipalities",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"municipalities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Municipalities",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/municipalities",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"municipalities"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 08:39:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"responseMessage\": \"200 OK\",\n    \"data\": [\n        {\n            \"municipalityId\": \"M-275266\",\n            \"municipalityName\": \"COPENHAGEN\",\n            \"active\": true\n        },\n        {\n            \"municipalityId\": \"M-838225\",\n            \"municipalityName\": \"AARHUS\",\n            \"active\": true\n        }\n    ],\n    \"numberOfRecords\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Municipalities Tax Schedule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/municipality-tax-schedule-data",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"municipality-tax-schedule-data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Municipalities Tax Schedule",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/municipality-tax-schedule-data",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"municipality-tax-schedule-data"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 09:12:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"responseMessage\": \"200 OK\",\n    \"data\": [\n        {\n            \"id\": \"S-960576\",\n            \"municipalityId\": \"M-256369\",\n            \"taxScheduleId\": \"1001\",\n            \"municipalityName\": \"AARHUS\",\n            \"taxValue\": 0.3,\n            \"startDate\": \"2024-08-01\",\n            \"endDate\": \"2024-08-01\",\n            \"taxSchedule\": \"DAILY\"\n        },\n        {\n            \"id\": \"S-444269\",\n            \"municipalityId\": \"M-256369\",\n            \"taxScheduleId\": \"1001\",\n            \"municipalityName\": \"AARHUS\",\n            \"taxValue\": 0.3,\n            \"startDate\": \"2024-01-01\",\n            \"endDate\": \"2024-01-01\",\n            \"taxSchedule\": \"DAILY\"\n        },\n        {\n            \"id\": \"S-763320\",\n            \"municipalityId\": \"M-256369\",\n            \"taxScheduleId\": \"1001\",\n            \"municipalityName\": \"AARHUS\",\n            \"taxValue\": 0.3,\n            \"startDate\": \"2024-02-01\",\n            \"endDate\": \"2024-02-01\",\n            \"taxSchedule\": \"DAILY\"\n        }\n    ],\n    \"numberOfRecords\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Municipality Tax schedule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/municipality/:id/tax-schedule-data",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"municipality",
+						":id",
+						"tax-schedule-data"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "S-960576"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Tax schedule",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taxValue\": 1.1,\r\n    \"startDate\": \"2025-04-01\",\r\n    \"endDate\": \"2025-04-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/municipality/:id/tax-schedule-data",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"municipality",
+								":id",
+								"tax-schedule-data"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "S-960575"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 09:17:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"404\",\n    \"errorMessage\": \"No record found for this ID\",\n    \"errorDetails\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Municipalities Date Tax Schedule Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/municipality-tax-schedule-data",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"municipality-tax-schedule-data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Municipalities Tax Schedule Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/municipality/:municipality/:date/tax-schedule",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"municipality",
+								":municipality",
+								":date",
+								"tax-schedule"
+							],
+							"variable": [
+								{
+									"key": "municipality",
+									"value": "COPENHAGEN"
+								},
+								{
+									"key": "date",
+									"value": "2024-07-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 20 Jul 2024 10:43:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"responseMessage\": \"200 OK\",\n    \"data\": {\n        \"municipality\": \"COPENHAGEN\",\n        \"tax\": \"0.4\",\n        \"taxSchedule\": \"DAILY\"\n    },\n    \"numberOfRecords\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Tax Schedules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tax-schedules",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tax-schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Tax Schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taxScheduleId\": \"1002\",\r\n    \"municipalityName\": \"ODENSE\",\r\n    \"taxValue\": 0.2,\r\n    \"startDate\": \"01-07-2024\",\r\n    \"endDate\": \"07-07-2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/add-municipality-tax-schedule-data",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add-municipality-tax-schedule-data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Tax Schedule Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taxScheduleId\": 1001,\r\n    \"municipalityName\": \"AARHUS\",\r\n    \"taxValue\": 0.3,\r\n    \"startDate\": \"2024-02-01\",\r\n    \"endDate\": \"2024-02-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/add-municipality-tax-schedule-data",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-municipality-tax-schedule-data"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 09:12:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 202,\n    \"responseMessage\": \"Saved successfully\",\n    \"data\": \"S-763320\",\n    \"numberOfRecords\": 1\n}"
+				}
+			]
+		}
+	]
+}
