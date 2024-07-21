@@ -6,7 +6,8 @@ This repository contains a web application for displaying tax rates for municipa
 - **Backend (Spring Boot v3.3.1 with Java 17)**
     - Exposes REST APIs for managing municipalities and tax schedules.
     - Utilizes Swagger UI for API documentation: [Swagger UI Link](http://localhost:8080/swagger-ui/index.html#)
-![img.png](documentation/Swagger Snip.png)
+      
+![img.png](https://github.com/rv1708/db-tax-manager-application/blob/main/db-tax-manager-backend/documentation/Swagger%20Snip.png)
 
 ## Backend Endpoints
 
@@ -30,4 +31,4 @@ This repository contains a web application for displaying tax rates for municipa
 
 ## Database
 
-![img.png](documentation/Database Snip.png)
+![img.png](https://github.com/rv1708/db-tax-manager-application/blob/main/db-tax-manager-backend/documentation/Database%20Snip.png)
